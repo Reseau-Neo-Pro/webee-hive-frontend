@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        {/*Layout Ici */}
+        {/* Navbar */}
+        {children}
+        {/* Footer */}
+      </body>
     </html>
   )
 }
