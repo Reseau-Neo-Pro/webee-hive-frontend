@@ -1,5 +1,10 @@
+"use client"
+
 import './globals.css'
 import { Bebas_Neue } from 'next/font/google'
+
+import { darkTheme } from "./theme/themes";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
 const font = Bebas_Neue({
   weight: ['400'],
@@ -18,12 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={font.className}>
-        {/*Layout Ici */}
-        {/* Navbar */}
-        {children}
-        {/* Footer */}
-      </body>
-    </html>
+      <ThemeProvider theme={darkTheme} >
+        <CssBaseline />
+        <body className={font.className}>
+          {/*Layout Ici */}
+          {/* Navbar */}
+          {children}
+          {/* Footer */}
+        </body>
+      </ThemeProvider>
+    </html >
   )
 }
