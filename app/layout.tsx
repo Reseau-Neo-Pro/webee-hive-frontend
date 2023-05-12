@@ -5,6 +5,7 @@ import { Bebas_Neue } from 'next/font/google'
 
 import { darkTheme } from "./theme/themes";
 import { ThemeProvider, CssBaseline } from "@mui/material";
+import Navbar from './components/Navbar';
 
 const font = Bebas_Neue({
   weight: ['400'],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <ThemeProvider theme={darkTheme} >
         <CssBaseline />
         <body className={font.className}>
+          <Navbar />
           {/*Layout Ici */}
           {/* Navbar */}
           {children}
