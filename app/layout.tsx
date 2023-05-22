@@ -43,7 +43,7 @@ export default function RootLayout({
         {/*Layout Ici */}
         {/* Navbar */}
         <Navbar />
-        
+
         <div
           className="main"
           style={{ border: "1px solid purple", width: "100%" }}
