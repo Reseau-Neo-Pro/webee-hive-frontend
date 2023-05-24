@@ -1,11 +1,50 @@
 .card {
   width : 406px;
-  max-height: 529px;
+  height: 529px;
   background-color: #ffffff;
   border-radius: 70px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .trade{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 184px;
+
+    .graduated {
+      width: 68px;
+      height: 41px;
+    }
+
+    .jobs {
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 
   .user-picture {
     max-width: 406px;
-    border-radius: 70px;
+    object-fit: contain;
+    padding-bottom: 19px;
+  }
+
+  .user-name {
+    padding-bottom: 63px;
+  }
+}
+  .user-skills {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 16px;
+    padding-bottom: 28px;
   }
 };
