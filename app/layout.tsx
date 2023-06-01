@@ -14,10 +14,10 @@ const font = Bebas_Neue({
 });
 
 //Insert les metadata dans le head
-export const metadata = {
-  title: "WeBee Hive",
-  description: "Réseau social pour néo-pro du web",
-};
+// export const metadata = {
+//   title: "WeBee Hive",
+//   description: "Réseau social pour néo-pro du web",
+// };
 
 // Function Principal du layout
 export default function RootLayout({
