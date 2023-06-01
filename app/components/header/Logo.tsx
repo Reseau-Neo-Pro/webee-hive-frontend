@@ -1,7 +1,12 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
 
-const Logo = ({ showText, toggleText }) => {
+interface LogoProps {
+  showText?: boolean;
+  toggleText?: boolean;
+}
+
+const Logo: React.FC<LogoProps> = ({ showText, toggleText }) => {
   const handleClick = () => {
     toggleText(!showText); // Appeler la fonction toggleDrawer lors du clic sur le logo
   };

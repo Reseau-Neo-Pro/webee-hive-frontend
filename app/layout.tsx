@@ -15,10 +15,10 @@ const font = Bebas_Neue({
 });
 
 //Insert les metadata dans le head
-export const metadata = {
-  title: "WeBee Hive",
-  description: "Réseau social pour néo-pro du web",
-};
+// export const metadata = {
+//   title: "WeBee Hive",
+//   description: "Réseau social pour néo-pro du web",
+// };
 
 // Function Principal du layout
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="fr">
       <body
         className={font.className}
-        style={{ border: "2px solid blue", display: "flex", maxWidth: "100vw" }}
+        style={{ border: "2px solid blue", display: "flex", maxWidth: "100vw" }} //tailwind -> border-[2px]
       >
         {/*Layout Ici */}
         {/* Navbar */}
