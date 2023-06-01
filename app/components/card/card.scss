@@ -37,7 +37,8 @@
   }
 
   .user-name {
-    padding-bottom: 63px;
+    display: flex;
+    align-self: center;
   }
 }
   .user-skills {
@@ -45,6 +46,5 @@
     flex-direction: row;
     align-self: center;
     gap: 16px;
-    padding-bottom: 28px;
   }
 };
