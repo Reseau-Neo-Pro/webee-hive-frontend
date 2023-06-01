@@ -8,7 +8,6 @@ import {
   ListItemText,
 } from "@mui/material";
 
-import { GrHomeRounded } from "react-icons/gr";
 import {
   HiOutlineUsers,
   HiOutlineRocketLaunch,
@@ -17,9 +16,10 @@ import {
 import { TbMessageCircle } from "react-icons/tb";
 import { MdOutlineEventNote } from "react-icons/md";
 import { IoEarthOutline, IoSettingsOutline } from "react-icons/io5";
+import MenuProps from "../../interfaces/MenuProps";
 
-const Menu = ({ showText }) => {
-  //  to do   : mettre le bon lien
+const Menu: React.FC<MenuProps> = ({ showText }) => {
+  //  to do   : mettre les bons liens
   let menuCategories = [
     { id: 1, icon: <HiOutlineHome />, name: "ACCUEIL", link: "/" },
     {

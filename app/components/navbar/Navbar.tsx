@@ -3,14 +3,10 @@ import React, { useState } from "react";
 import Logo from "../header/Logo";
 
 import Menu from "./Menu";
+import MenuProps from "@/app/interfaces/MenuProps";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar: React.FC<MenuProps> = () => {
   const [showText, setShowText] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
 
   const toggleText = () => {
     setShowText(!showText);
