@@ -6,6 +6,64 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  pseudo String?
+  email String? @unique
+  image String?
+  hashedPassword String?
+  description String?
+  favoritesIds String[] @db.ObjectId
+  recommendationIds String[] @db.ObjectId
+  jobIds String[] @db.ObjectId
+  projectIds String[] @db.ObjectId
+  stacksIds String[] @db.ObjectId
+  Status Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  jobs Job[]
+  stacks Stack[]
+}
+
+model Job {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  stack String[] @db.ObjectId
+  logo String?
+  usersIds String[] @db.ObjectId
+
+  stacks Stack[]
+
+  users User @relation(fields: [usersIds], references: [id])
+}
+
+model Stack {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  usersIds String[] @db.ObjectId
+  jobId String @db.ObjectId
+  name String
+  logo String?
+
+  users User @relation(fields: [usersIds], references: [id])
+  job Job @relation(fields: [jobId], references: [id])
+}
+
+model Project {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  jobsIds String[] @db.ObjectId
+  usersIds String[] @db.ObjectId
+  stacksIds String[] @db.ObjectId
+  status Boolean
+  commentsIds String[] @db.ObjectId
+  adminsIds String[] @db.ObjectId
+  title String
+  description String?
+  image String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
