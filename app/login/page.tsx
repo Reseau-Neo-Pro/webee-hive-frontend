@@ -58,11 +58,9 @@ export default function LoginPage() {
                 Sign in
             </button>
         </div>
-        <div>You already have an account ? <Link href='/login'>Sign up</Link> </div>
+        <div>You already have an account ? <Link href='/register'>Sign up</Link> </div>
     </form>
   )
 }
-function signIn(arg0: string, arg1: { redirect: boolean; email: string; password: string; }) {
-    throw new Error('Function not implemented.');
-}
+
 
