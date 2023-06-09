@@ -1,29 +1,47 @@
 'use client';
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import Input from '../components/input/Input';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+import { Link } from '@mui/material';
 
-interface initialStateProps {
+interface InitialStateProps {
     name: string;
     email: string;
     password: string;
 }
 
-const initialState = {
+const initialState:InitialStateProps = {
     name: '',
     email: '',
     password: '',
 }
 
-export default function registerPage() {
+export default function RegisterPage() {
 
     const [state, setState] = useState(initialState);
+    const router = useRouter();
 
     const handleChange = (e:any) => {
         setState({...state, [e.target.name]: e.target.value})
     }
 
-    const onSubmit = () => {
-        
+    const onSubmit = (event:FormEvent) => {
+        event.preventDefault()
+        axios.post('/api/register', state)
+        .then(() => {
+            router.refresh()
+        })
+        .then(() => {
+            setTimeout(() => {
+                router.push('/login')
+            },2500)
+        })
+        .catch((err:any) => {
+            console.log(err)
+        })
+        .finally(() => {
+        })
     }
 
   return (
@@ -44,7 +62,7 @@ export default function registerPage() {
                 Sign up
             </button>
         </div>
-
+        <div>Do you have an account ? <Link href='/login'>Sign in</Link> </div>
     </form>
   )
 }
