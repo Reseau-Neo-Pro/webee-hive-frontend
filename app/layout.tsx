@@ -43,13 +43,13 @@ export default function RootLayout({
         {/*Layout Ici */}
         {/* Navbar */}
         <Navbar />
-
+        
         <div
           className="main"
           style={{ border: "1px solid purple", width: "100%" }}
         >
           <Header currentUser={currentUser} />
-
+          {children}
           <div
             className="cursor-pointer border-2 rounded-md bg-neutral-400 w-fit p-3 m-7"
             onClick={toggleConnected}
@@ -60,7 +60,7 @@ export default function RootLayout({
           </div>
         </div>
         {/* les pages s'afficheront a la place du "children" */}
-        {/* {children} */}
+         {/* {children} */}
 
         {/* Footer */}
       </body>
