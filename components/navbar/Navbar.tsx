@@ -5,6 +5,7 @@ import Logo from "../header/Logo";
 import Menu from "./Menu";
 import MenuProps from "@/app/interfaces/MenuProps";
 
+
 const Navbar: React.FC<MenuProps> = () => {
   const [showText, setShowText] = useState(false);
 
