@@ -24,7 +24,7 @@ export default function LoginPage() {
     }
 
     const onSubmit = (event:FormEvent) => {
-        event.preventDefault()
+      /*   event.preventDefault()
         
         signIn('credentials', {
             ...state,
@@ -38,7 +38,8 @@ export default function LoginPage() {
                 throw new Error('Wrong Credentials')
             }
         })
-        router.push('/')
+        router.push('/') */
+        console.log('signIn')
     }
 
   return (
