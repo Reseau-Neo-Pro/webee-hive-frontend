@@ -1,27 +1,26 @@
 .card {
-  width : 406px;
-  height: 529px;
+  width :300px;
+  height: 380px;
   background-color: #ffffff;
   border-radius: 70px;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-left: 30px;
 
   .trade{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    gap: 184px;
+    .profile-job {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 30px;
+      padding-left: 30px;
 
-    .graduated {
-      width: 68px;
-      height: 41px;
-    }
-
-    .jobs {
-      width: 41px;
-      height: 41px;
+      .graduated {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -45,6 +44,8 @@
     display: flex;
     flex-direction: row;
     align-self: center;
-    gap: 16px;
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 };
