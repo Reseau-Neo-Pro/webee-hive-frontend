@@ -1,8 +1,8 @@
 'use client';
 import React, { FormEvent, useState } from 'react'
-import Input from '../components/input/Input';
 import { useRouter } from 'next/navigation';
 import { Link } from '@mui/material';
+import Input from '@/components/input/Input';
 
 interface InitialStateProps {
     email: string;
