@@ -1,12 +1,12 @@
 "use client";
 
+import Navbar from "@/components/navbar/Navbar";
 import "./globals.css"; //Import du global css -> dont Tailwinds
 // Import de la font grace a Next
 import { Bebas_Neue } from "next/font/google";
 // Import du composant Header
-import Header from "./components/header/Header";
 import { useCallback, useState } from "react";
-import Navbar from "./components/navbar/Navbar";
+import Header from "@/components/header/Header";
 
 
 //initialisation de la font dans une variable
