@@ -8,7 +8,6 @@ import Header from "./components/header/Header";
 import { useCallback, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 
-
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
   weight: ["400"],
@@ -42,6 +41,7 @@ export default function RootLayout({
       >
         {/*Layout Ici */}
         {/* Navbar */}
+
         <Navbar />
 
         <div
