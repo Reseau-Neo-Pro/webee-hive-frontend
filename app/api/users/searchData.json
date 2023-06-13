@@ -1,0 +1,59 @@
+[
+    {
+        "id": "3615",
+        "prenom": "Gertrude",
+        "nom": "Blouc",
+        "stack" : "dev web",
+        "disponibilite": "dispo"
+    },
+    {
+        "id":"118",
+        "prenom": "Jean Hugue",
+        "nom": "De la Tourelle",
+        "stack" : "UX",
+        "disponibilite": "dispo"
+    },
+    {
+        "id":"218",
+        "prenom": "Giselle ",
+        "nom": "Loseille",
+        "stack" : "design",
+        "disponibilite": "dispo"
+    },
+    {
+        "id":"248",
+        "prenom": "Marcel ",
+        "nom": "Labrelle",
+        "stack" : "dev web",
+        "disponibilite": "pas dispo"
+    },
+    {
+        "id":"138",
+        "prenom": "Jacqueline ",
+        "nom": "Lacoquine",
+        "stack" : "quiche",
+        "disponibilite": "dispo"
+    },
+    {
+        "id":"946",
+        "prenom": "Jacquouille ",
+        "nom": "Lafripouille",
+        "stack" : "dev web",
+        "disponibilite": "pas dispo"
+    },
+    {
+        "id":"2",
+        "prenom": "Rosette",
+        "nom": "Labrouette",
+        "stack" : "UX",
+        "disponibilite": "dispo"
+    },
+    {
+        "id":"764",
+        "prenom": "Eloise",
+        "nom": "Lafrise",
+        "stack" : "dev web",
+        "disponibilite": "dispo"
+    }
+]
+
