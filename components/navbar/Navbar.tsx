@@ -28,7 +28,6 @@ const Navbar = () => {
           display: "inline'flex",
           flexDirection: "column",
           justifyContent: "center",
-          //width: "auto",
         }}
       >
         <Logo showText={showText} toggleText={toggleText} />
