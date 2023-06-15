@@ -1,9 +1,10 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import Logo from "../header/Logo";
-
 import Menu from "./Menu";
+
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
+
 
 const Navbar = () => {
   const [showText, setShowText] = useState(false);
