@@ -97,6 +97,7 @@ const Menu: React.FC<MenuProps> = ({ showText }) => {
               sx={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <ListItemIcon
