@@ -1,4 +1,4 @@
-import MenuProps from "@/app/interfaces/MenuProps";
+import MenuProps from "@/interfaces/MenuProps";
 import { Box } from "@mui/material";
 import Image from "next/image";
 
