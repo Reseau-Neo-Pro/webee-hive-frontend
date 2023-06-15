@@ -62,8 +62,37 @@ const Menu: React.FC<MenuProps> = ({ showText }) => {
   return (
     <List>
       {menuCategories.map((category) => (
-        <ListItem key={category.id} disablePadding>
-          <Link href={category.link} color="inherit" underline="none">
+        <ListItem
+          key={category.id}
+          disablePadding
+          sx={{ marginBottom: "1.5rem" }}
+        >
+          <Link
+            href={category.link}
+            color="inherit"
+            underline="none"
+            title={!showText ? category.name : undefined}
+            sx={{
+              position: "relative",
+              "&::before": {
+                content: "''",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "#efa700",
+                borderRadius: "4px",
+                boxShadow: "4px 4px 4px 0px rgba(239, 167, 0, 0.2)",
+                opacity: 0,
+                transition: "opacity 0.3s ease-in-out", // Transition douce
+                zIndex: -1,
+              },
+              "&:hover::before": {
+                opacity: 1,
+              },
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
@@ -72,7 +101,7 @@ const Menu: React.FC<MenuProps> = ({ showText }) => {
             >
               <ListItemIcon
                 sx={{
-                  fontSize: 24,
+                  fontSize: "1.8rem",
                   color: "inherit",
                   justifyContent: showText ? "flex-start" : "center",
                 }}
