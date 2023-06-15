@@ -2,6 +2,12 @@
 
 import { Button, Grid, Stack } from "@mui/material";
 
-export default function Home() {
+interface HomeProps{
+  title: string;
+  description: string;
+  buttonLabel: string;
+}
+
+export default function Home({title, description, buttonLabel}: HomeProps) {
   return <div>Home</div>;
 }
