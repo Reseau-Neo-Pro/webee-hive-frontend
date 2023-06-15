@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Logo from "../header/Logo";
 
 import Menu from "./Menu";
-import MenuProps from "@/app/interfaces/MenuProps";
+import MenuProps from "@/interfaces/MenuProps";
 
 const Navbar = () => {
   const [showText, setShowText] = useState(false);
