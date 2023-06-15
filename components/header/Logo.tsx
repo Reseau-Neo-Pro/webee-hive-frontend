@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Logo: React.FC<MenuProps> = ({ showText, toggleText }) => {
   const handleClick = () => {
-    toggleText: void(!showText); // Appeler la fonction toggleText lors du clic sur le logo
+    toggleText(!showText); // Appeler la fonction toggleText lors du clic sur le logo
   };
   return (
     <Box display="flex" alignItems="center" gap={5} flexDirection="column">

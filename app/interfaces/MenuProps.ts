@@ -1,6 +1,6 @@
 interface MenuProps {
-    showText?: boolean;
-    toggleText?: () => void | undefined;
+    showText: boolean;
+    toggleText: (showText:boolean) => void | undefined;
   }
   
   export default MenuProps;

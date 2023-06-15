@@ -8,7 +8,6 @@ import { Bebas_Neue } from "next/font/google";
 import { useCallback, useState } from "react";
 import Header from "@/components/header/Header";
 
-
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
   weight: ["400"],
@@ -35,7 +34,6 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-
       <body
         className={font.className}
         style={{ border: "2px solid blue", display: "flex", maxWidth: "100vw" }} //tailwind -> border-[2px]
@@ -43,7 +41,7 @@ export default function RootLayout({
         {/*Layout Ici */}
         {/* Navbar */}
         <Navbar />
-        
+
         <div
           className="main"
           style={{ border: "1px solid purple", width: "100%" }}
@@ -60,7 +58,7 @@ export default function RootLayout({
           </div>
         </div>
         {/* les pages s'afficheront a la place du "children" */}
-         {/* {children} */}
+        {/* {children} */}
 
         {/* Footer */}
       </body>

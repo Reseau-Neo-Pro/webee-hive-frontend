@@ -5,8 +5,7 @@ import Logo from "../header/Logo";
 import Menu from "./Menu";
 import MenuProps from "@/app/interfaces/MenuProps";
 
-
-const Navbar: React.FC<MenuProps> = () => {
+const Navbar = () => {
   const [showText, setShowText] = useState(false);
 
   const toggleText = () => {
@@ -35,6 +34,7 @@ const Navbar: React.FC<MenuProps> = () => {
         <Logo showText={showText} toggleText={toggleText} />
         <Menu
           showText={showText}
+          toggleText={toggleText}
           //toggleDrawer={toggleDrawer}
         />
       </Grid>
