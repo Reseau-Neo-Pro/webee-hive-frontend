@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Logo from "../header/Logo";
 
 import Menu from "./Menu";
-import MenuProps from "@/app/interfaces/MenuProps";
 
 const Navbar = () => {
   const [showText, setShowText] = useState(false);
@@ -31,11 +30,7 @@ const Navbar = () => {
         }}
       >
         <Logo showText={showText} toggleText={toggleText} />
-        <Menu
-          showText={showText}
-          toggleText={toggleText}
-          //toggleDrawer={toggleDrawer}
-        />
+        <Menu showText={showText} toggleText={toggleText} />
       </Grid>
     </Grid>
   );
