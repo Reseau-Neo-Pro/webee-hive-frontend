@@ -2,18 +2,20 @@ import MenuProps from "@/app/interfaces/MenuProps";
 import { Box } from "@mui/material";
 import Image from "next/image";
 
-const Logo: React.FC<MenuProps> = ({ showText, toggleText }) => {
-  const handleClick = () => {
-    toggleText(!showText); // Appeler la fonction toggleText lors du clic sur le logo
-  };
+const Logo: React.FC<MenuProps> = ({ showText }) => {
   return (
-    <Box display="flex" alignItems="center" gap={5} flexDirection="column">
+    <Box
+      display="flex"
+      alignItems="center"
+      gap={5}
+      flexDirection="column"
+      marginBottom={3}
+    >
       <Image
         src="/images/LOGO.png"
         alt="WeBee Hive Logo"
         width={82}
         height={82}
-        onClick={handleClick}
         style={{ cursor: "pointer" }}
       />
       {showText && (
