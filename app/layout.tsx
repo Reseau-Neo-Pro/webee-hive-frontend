@@ -7,6 +7,7 @@ import { Bebas_Neue } from "next/font/google";
 import Header from "./components/header/Header";
 import { useCallback, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
+import Card from "@/app/components/gallery/card/card";
 
 
 //initialisation de la font dans une variable
@@ -44,6 +45,7 @@ export default function RootLayout({
         {/* Navbar */}
         <Navbar />
 
+
         <div
           className="main"
           style={{ border: "1px solid purple", width: "100%" }}
@@ -58,6 +60,7 @@ export default function RootLayout({
             {/* les pages s'afficheront a la place du "children" */}
             {/* {children} */}
           </div>
+          <Card />
         </div>
         {/* les pages s'afficheront a la place du "children" */}
          {/* {children} */}
