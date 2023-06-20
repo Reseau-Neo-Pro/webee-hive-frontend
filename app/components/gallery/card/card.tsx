@@ -1,17 +1,16 @@
 'use client';
 
-import { CiMedal } from 'react-icons/Ci';
-import { AiOutlineRightSquare, AiOutlineCodepen, AiOutlineHtml5, AiOutlineGithub } from 'react-icons/Ai';
-import { CiPizza, CiBeerMugFull, CiGlobe } from 'react-icons/Ci';
+import { CiMedal } from 'react-icons/ci';
+import { AiOutlineRightSquare, AiOutlineCodepen, AiOutlineHtml5, AiOutlineGithub } from 'react-icons/ai';
+import { CiPizza, CiBeerMugFull, CiGlobe } from 'react-icons/ci';
 import cardPicture from '../../../../assets/profile.png';
-
-
-import './card.scss';
-
+import wave from '../../../../assets/wave.svg';
+// import './card.scss';
 
 function Card () {
     return (
-        <div className="card">
+        <div className="flex flex-col w-72 h-96">
+            <img className="wave" alt="wave" src={wave.src}/>
             <div className="trade">
                 <div className="profile-job">
                     <div className="graduated"><CiMedal size={30}/>1 an</div>
