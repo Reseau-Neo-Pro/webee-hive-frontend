@@ -5,23 +5,23 @@ import { AiOutlineRightSquare, AiOutlineCodepen, AiOutlineHtml5, AiOutlineGithub
 import { CiPizza, CiBeerMugFull, CiGlobe } from 'react-icons/ci';
 import cardPicture from '../../../../assets/profile.png';
 import wave from '../../../../assets/wave.svg';
-// import './card.scss';
+
 
 function Card () {
     return (
-        <div className="flex flex-col w-72 h-96">
-            <img className="wave" alt="wave" src={wave.src}/>
-            <div className="trade">
-                <div className="profile-job">
-                    <div className="graduated"><CiMedal size={30}/>1 an</div>
+        <div className="flex flex-col w-64 h-80 rounded-[70px] shadow-md shadow-[#c9c6c6] justify-between mx-[30px] relative">
+            <img className="p-0 rounded-[70px] absolute max-w-[288px] top-0 left-0" alt="wave" src={wave.src}/>
+            <div className="relative pt-[32px] pl-[15px] pr-[15px]">
+                <div className="flex flex-row justify-between px-[20px]">
+                    <div className="flex items-center"><CiMedal size={30}/>1 an</div>
                     <div className="jobs"><AiOutlineRightSquare size={30}/></div>
                 </div>
             </div>
-            <div className="profile">
-                <img className="user-picture" alt="user-picture" src={cardPicture.src}/>
-                <div className="user-name">Name</div>
+            <div className="flex flex-col self-center">
+                <img className="max-w-[406px] object-contain py-[19px]" alt="user-picture" src={cardPicture.src}/>
+                <div className="flex self-center">Name</div>
             </div>
-            <div className="user-skills">
+            <div className="flex flex-row self-center gap-[10px] px-[15px] py-[28px]">
                 <div className="skills"><AiOutlineCodepen size={30}/></div>
                 <div className="skills"><CiPizza size={30}/></div>
                 <div className="skills"><CiBeerMugFull size={30}/></div>
