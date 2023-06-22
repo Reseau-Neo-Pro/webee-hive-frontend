@@ -1,5 +1,5 @@
 import MyForm from "./MyForm";
 
-export default async function fakeUser() {
+export default function fakeUser() {
   return <MyForm />;
 }
