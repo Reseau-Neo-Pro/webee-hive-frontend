@@ -1,7 +1,5 @@
-"use client";
-
 import MyForm from "./MyForm";
 
-export default function fakeUser() {
+export default async function fakeUser() {
   return <MyForm />;
 }
