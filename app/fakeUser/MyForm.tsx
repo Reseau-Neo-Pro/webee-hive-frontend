@@ -8,38 +8,54 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import axios from "axios";
 
 interface FormData {
   pseudo: string;
   email: string;
   imageUrl: String;
   password: string;
-  status: boolean;
+  statusDispo: boolean;
   description: string;
 }
 
 const MyForm: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     pseudo: "",
     email: "",
     imageUrl: "",
     password: "",
-    status: false,
+    statusDispo: false,
     description: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: checked ? checked : value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Faire quelque chose avec les données du formulaire
+    setIsLoading(true);
     console.log(formData);
+    axios
+      .post("/api/create-fake-user", formData)
+      .then((data) => {
+        if (data.statusText === "OK") {
+          alert("fake user as been create");
+        } else {
+          alert("something went wrong");
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -114,9 +130,9 @@ const MyForm: React.FC = () => {
           <FormControlLabel
             control={
               <Checkbox
-                checked={formData.status}
+                checked={formData.statusDispo}
                 onChange={handleChange}
-                name="status"
+                name="statusDispo"
               />
             }
             label="Êtes vous disponible?"
