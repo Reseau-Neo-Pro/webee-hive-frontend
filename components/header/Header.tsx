@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser }) => {
       <AppBar
         position="static"
         className="appbar"
-        sx={{ backgroundColor: "transparent" }}
+        sx={{ backgroundColor: "transparent", backgroundImage: "none" }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Searchbar />
