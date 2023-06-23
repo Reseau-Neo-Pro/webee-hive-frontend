@@ -10,6 +10,7 @@ const Logo: React.FC<MenuProps> = ({ showText }) => {
       gap={5}
       flexDirection="column"
       marginBottom={3}
+      data-testid="navbar-logo"
     >
       <Image
         src="/images/LOGO.png"
