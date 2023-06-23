@@ -15,6 +15,15 @@ export const ThemeProvider: React.FC<React.PropsWithChildren<{}>> = ({
 
   const theme = createTheme({
     palette: palette as PaletteOptions,
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600, // Tablette
+        md: 960, // Laptop
+        lg: 1280,
+        xl: 1920,
+      },
+    },
     // Autres options du thème
   });
 

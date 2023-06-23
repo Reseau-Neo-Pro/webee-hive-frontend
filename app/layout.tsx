@@ -9,6 +9,7 @@ import { useCallback, useState } from "react";
 import Header from "@/components/header/Header";
 import { Providers } from "@/lib/redux/Providers";
 import { ThemeProvider } from "@/lib/redux/ThemeProvider";
+import { CssBaseline } from "@mui/material";
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
@@ -42,6 +43,7 @@ export default function RootLayout({
       >
         <Providers>
           <ThemeProvider>
+            <CssBaseline />
             {/*Layout Ici */}
             {/* Navbar */}
             <Navbar />
