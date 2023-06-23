@@ -16,6 +16,7 @@ export const lightPalette = {
 };
 
 export const darkPalette = {
+  mode: "dark",
   primary: {
     main: "#fff",
     greyLight: "#DFDFE0",
@@ -24,7 +25,7 @@ export const darkPalette = {
     main: "#ff4081",
   },
   background: {
-    main: "#424242",
+    main: "#666666",
     grey: "#797979",
     yellow: "#F4C600",
   },
