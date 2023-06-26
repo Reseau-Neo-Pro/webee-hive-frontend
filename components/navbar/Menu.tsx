@@ -69,7 +69,7 @@ const Menu: React.FC<MenuProps> = ({ showText }) => {
         >
           <Link
             href={category.link}
-            color="inherit"
+            color="text.main"
             underline="none"
             title={!showText ? category.name : undefined}
             sx={{
@@ -81,7 +81,7 @@ const Menu: React.FC<MenuProps> = ({ showText }) => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: "#efa700",
+                backgroundColor: "background.yellow",
                 borderRadius: "4px",
                 boxShadow: "4px 4px 4px 0px rgba(239, 167, 0, 0.2)",
                 opacity: 0,

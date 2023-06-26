@@ -8,6 +8,8 @@ import { Bebas_Neue } from "next/font/google";
 import { useCallback, useState } from "react";
 import Header from "@/components/header/Header";
 import { Providers } from "@/lib/redux/Providers";
+import { ThemeProvider } from "@/lib/redux/ThemeProvider";
+import { CssBaseline } from "@mui/material";
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
@@ -40,29 +42,32 @@ export default function RootLayout({
         style={{ border: "2px solid blue", display: "flex", maxWidth: "100vw" }} //tailwind -> border-[2px]
       >
         <Providers>
-          {/*Layout Ici */}
-          {/* Navbar */}
-          <Navbar />
+          <ThemeProvider>
+            <CssBaseline />
+            {/*Layout Ici */}
+            {/* Navbar */}
+            <Navbar />
 
-          <div
-            className="main"
-            style={{ border: "1px solid purple", width: "100%" }}
-          >
-            <Header currentUser={currentUser} />
-            {children}
             <div
-              className="cursor-pointer border-2 rounded-md bg-neutral-400 w-fit p-3 m-7"
-              onClick={toggleConnected}
+              className="main"
+              style={{ border: "1px solid purple", width: "100%" }}
             >
-              Connected
-              {/* les pages s'afficheront a la place du "children" */}
-              {/* {children} */}
+              <Header currentUser={currentUser} />
+              {children}
+              <div
+                className="cursor-pointer border-2 rounded-md bg-neutral-400 w-fit p-3 m-7"
+                onClick={toggleConnected}
+              >
+                Connected
+                {/* les pages s'afficheront a la place du "children" */}
+                {/* {children} */}
+              </div>
             </div>
-          </div>
-          {/* les pages s'afficheront a la place du "children" */}
-          {/* {children} */}
+            {/* les pages s'afficheront a la place du "children" */}
+            {/* {children} */}
 
-          {/* Footer */}
+            {/* Footer */}
+          </ThemeProvider>
         </Providers>
       </body>
     </html>
