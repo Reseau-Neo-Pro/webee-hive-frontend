@@ -7,9 +7,10 @@ import { Bebas_Neue } from "next/font/google";
 // Import du composant Header
 import { useCallback, useState } from "react";
 import Header from "@/components/header/Header";
-import { Providers } from "@/lib/redux/Providers";
-import { ThemeProvider } from "@/lib/redux/ThemeProvider";
+import { Providers } from "@/libs/redux/Providers";
+import { ThemeProvider } from "@/libs/redux/reducers/theme/ThemeProvider";
 import { CssBaseline } from "@mui/material";
+import SetTheme from "@/libs/redux/reducers/theme/setTheme";
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
@@ -43,6 +44,7 @@ export default function RootLayout({
       >
         <Providers>
           <ThemeProvider>
+            <SetTheme />
             <CssBaseline />
             {/*Layout Ici */}
             {/* Navbar */}

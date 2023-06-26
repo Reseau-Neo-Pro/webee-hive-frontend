@@ -1,6 +1,6 @@
 import { Switch } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "./../../lib/redux/hooks";
-import { toggleTheme } from "@/lib/redux/reducers/themeSlice";
+import { useAppDispatch, useAppSelector } from "@/libs/redux/hooks";
+import { toggleTheme } from "@/libs/redux/reducers/theme/themeSlice";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 

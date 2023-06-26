@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { saveThemeLS } from "../../saveLocalStorage";
 
 interface ThemeState {
   lightTheme: boolean;
@@ -14,6 +15,7 @@ const themeSlice = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.lightTheme = !state.lightTheme;
+      saveThemeLS(state.lightTheme);
     },
   },
 });

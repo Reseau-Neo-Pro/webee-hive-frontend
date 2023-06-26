@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import theme from "./reducers/themeSlice";
+import theme from "./reducers/theme/themeSlice";
 
 export const store = configureStore({
   reducer: {
-    theme
+    theme,
   },
 });
 

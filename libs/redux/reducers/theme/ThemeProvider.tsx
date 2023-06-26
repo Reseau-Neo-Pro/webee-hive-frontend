@@ -1,9 +1,9 @@
-import { useAppSelector } from "./hooks";
+import { useAppSelector } from "@/libs/redux/hooks";
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
-import { lightPalette, darkPalette } from "../../theme/themes";
+import { lightPalette, darkPalette } from "@/theme/themes";
 import { PaletteOptions } from "@mui/material/styles";
 
 export const ThemeProvider: React.FC<React.PropsWithChildren<{}>> = ({
