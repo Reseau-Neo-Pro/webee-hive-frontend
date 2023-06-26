@@ -1,78 +1,42 @@
-import { Grid, useTheme, useMediaQuery } from "@mui/material";
-import React, { useState, useEffect } from "react";
-import Logo from "./Logo";
+import { Grid } from "@mui/material";
+import React, { useState } from "react";
+import Logo from "../header/Logo";
+
 import Menu from "./Menu";
+import MenuProps from "@/app/interfaces/MenuProps";
 
-import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 
-const Navbar = () => {
-  const theme = useTheme();
-  const isBelowMd = useMediaQuery(theme.breakpoints.down("md"));
-  const [showText, setShowText] = useState(!isBelowMd);
-
-  useEffect(() => {
-    setShowText(!isBelowMd);
-  }, [isBelowMd]);
+const Navbar: React.FC<MenuProps> = () => {
+  const [showText, setShowText] = useState(false);
 
   const toggleText = () => {
     setShowText(!showText);
   };
-
-  const containerWidth = showText && !isBelowMd ? "15rem" : "4rem";
-
+  const containerWidth = showText ? "15%" : "5%";
   return (
     <Grid
       container
-      className="navbarContainer"
-      data-testid="navbar-container"
+      className="classNavBar"
       maxWidth={containerWidth}
       height="100vh"
-      sx={{
-        //border: "1px solid red",
-        backgroundColor: "background.main",
-        minWidth: "fit-content",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        alignContent: "flex-start",
-        justifyContent: "center",
-        gap: "5rem",
-      }}
+      sx={{ border: "1px solid red" }}
     >
-      <Logo showText={showText} data-testid="navbar-logo" />
       <Grid
-        className="navbar"
         item
-        xs={11}
+        xs={12}
         sx={{
-          // border: "1px green solid",
-          display: "flex",
+          border: "1px green solid",
+          display: "inline'flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
-          position: "fixed",
-          top: "13rem",
+          //width: "auto",
         }}
       >
-        <Menu showText={showText} data-testid="navbar-menu" />
-        {!isBelowMd && (
-          <>
-            {showText ? (
-              <AiOutlineDoubleLeft
-                size="3rem"
-                onClick={toggleText}
-                style={{ cursor: "pointer" }}
-              />
-            ) : (
-              <AiOutlineDoubleRight
-                size="3rem"
-                onClick={toggleText}
-                style={{ cursor: "pointer" }}
-                data-testid="toggle-button"
-              />
-            )}
-          </>
-        )}
+        <Logo showText={showText} toggleText={toggleText} />
+        <Menu
+          showText={showText}
+          //toggleDrawer={toggleDrawer}
+        />
       </Grid>
     </Grid>
   );

@@ -56,7 +56,7 @@ export default function LoginPage() {
                 type="submit"
                 className='px-6 py-3 flex items-center justify-center bg-blue-700 border-none text-white hover:bg-blue-500 focus:border focus border-gray-200 transition ease-out'
             >
-                SignIn
+                Sign in
             </button>
         </div>
         <div>You already have an account ? <Link href='/register'>Sign up</Link> </div>

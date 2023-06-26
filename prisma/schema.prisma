@@ -22,7 +22,7 @@ model User {
   jobIds String[] @db.ObjectId
   projectIds String[] @db.ObjectId
   stacksIds String[] @db.ObjectId
-  statusDispo Boolean
+  Status Boolean
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
