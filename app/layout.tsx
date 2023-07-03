@@ -11,6 +11,7 @@ import { Providers } from "@/libs/redux/Providers";
 import { ThemeProvider } from "@/libs/redux/reducers/theme/ThemeProvider";
 import { CssBaseline } from "@mui/material";
 import SetTheme from "@/libs/redux/reducers/theme/setTheme";
+import Card from '@/app/components/gallery/card/card';
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
@@ -64,6 +65,8 @@ export default function RootLayout({
                 {/* les pages s'afficheront a la place du "children" */}
                 {/* {children} */}
               </div>
+
+              <Card />
             </div>
             {/* les pages s'afficheront a la place du "children" */}
             {/* {children} */}
