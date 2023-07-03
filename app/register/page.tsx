@@ -1,9 +1,9 @@
 'use client';
 import React, { FormEvent, useState } from 'react'
-import Input from '../components/input/Input';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { Link } from '@mui/material';
+import Input from '@/components/input/Input';
 
 interface InitialStateProps {
     name: string;

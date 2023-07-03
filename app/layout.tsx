@@ -1,14 +1,16 @@
 "use client";
 
+import Navbar from "@/components/navbar/Navbar";
 import "./globals.css"; //Import du global css -> dont Tailwinds
 // Import de la font grace a Next
 import { Bebas_Neue } from "next/font/google";
 // Import du composant Header
-import Header from "./components/header/Header";
 import { useCallback, useState } from "react";
-import Navbar from "./components/navbar/Navbar";
-import Card from "@/app/components/gallery/card/card";
-
+import Header from "@/components/header/Header";
+import { Providers } from "@/libs/redux/Providers";
+import { ThemeProvider } from "@/libs/redux/reducers/theme/ThemeProvider";
+import { CssBaseline } from "@mui/material";
+import SetTheme from "@/libs/redux/reducers/theme/setTheme";
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
@@ -36,36 +38,39 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-
       <body
         className={font.className}
         style={{ border: "2px solid blue", display: "flex", maxWidth: "100vw" }} //tailwind -> border-[2px]
       >
-        {/*Layout Ici */}
-        {/* Navbar */}
-        <Navbar />
+        <Providers>
+          <ThemeProvider>
+            <SetTheme />
+            <CssBaseline />
+            {/*Layout Ici */}
+            {/* Navbar */}
+            <Navbar />
 
-
-        <div
-          className="main"
-          style={{ border: "1px solid purple", width: "100%" }}
-        >
-          <Header currentUser={currentUser} />
-          {children}
-          <div
-            className="cursor-pointer border-2 rounded-md bg-neutral-400 w-fit p-3 m-7"
-            onClick={toggleConnected}
-          >
-            Connected
+            <div
+              className="main"
+              style={{ border: "1px solid purple", width: "100%" }}
+            >
+              <Header currentUser={currentUser} />
+              {children}
+              <div
+                className="cursor-pointer border-2 rounded-md bg-neutral-400 w-fit p-3 m-7"
+                onClick={toggleConnected}
+              >
+                Connected
+                {/* les pages s'afficheront a la place du "children" */}
+                {/* {children} */}
+              </div>
+            </div>
             {/* les pages s'afficheront a la place du "children" */}
             {/* {children} */}
-          </div>
-          <Card />
-        </div>
-        {/* les pages s'afficheront a la place du "children" */}
-         {/* {children} */}
 
-        {/* Footer */}
+            {/* Footer */}
+          </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

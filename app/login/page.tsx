@@ -1,8 +1,8 @@
 'use client';
 import React, { FormEvent, useState } from 'react'
-import Input from '../components/input/Input';
 import { useRouter } from 'next/navigation';
 import { Link } from '@mui/material';
+import Input from '@/components/input/Input';
 
 interface InitialStateProps {
     email: string;
@@ -24,7 +24,7 @@ export default function LoginPage() {
     }
 
     const onSubmit = (event:FormEvent) => {
-        event.preventDefault()
+      /*   event.preventDefault()
         
         signIn('credentials', {
             ...state,
@@ -38,7 +38,8 @@ export default function LoginPage() {
                 throw new Error('Wrong Credentials')
             }
         })
-        router.push('/')
+        router.push('/') */
+        console.log('signIn')
     }
 
   return (
@@ -55,7 +56,7 @@ export default function LoginPage() {
                 type="submit"
                 className='px-6 py-3 flex items-center justify-center bg-blue-700 border-none text-white hover:bg-blue-500 focus:border focus border-gray-200 transition ease-out'
             >
-                Sign in
+                SignIn
             </button>
         </div>
         <div>You already have an account ? <Link href='/register'>Sign up</Link> </div>
