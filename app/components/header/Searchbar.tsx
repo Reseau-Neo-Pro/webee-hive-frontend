@@ -1,75 +1,75 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-// const SearchBar = () => {
-//   const [filters, setFilters] = useState({
-//     pseudo: '',
-//     status: '',
-//     job: ''
-//   });
-//   const [results, setResults] = useState([]);
+const SearchBar = () => {
+  const [filters, setFilters] = useState({
+    pseudo: '',
+    status: '',
+    job: ''
+  });
+  const [results, setResults] = useState([]);
 
-//   const handleInputChange = (event) => {
-//     const { pseudo, value } = event.target;
-//     setFilters((prevFilters) => ({
-//       ...prevFilters,
-//       [pseudo]: value
-//     }));
-//   };
+  const handleInputChange = (event) => {
+    const { pseudo, value } = event.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [pseudo]: value
+    }));
+  };
 
 
-//   //va chercher les resultats de la recherche renvoyé par l'API back pour affiché dans la liste
-//   const handleSearch = () => {
-//     axios
-//       .get('/api/search', { params: filters })
-//       .then((response) => {
-//         setResults(response.data);
-//       })
-//       .catch((error) => {
-//         console.error('Error searching products:', error);
-//       });
-//   };
+  //va chercher les resultats de la recherche renvoyé par l'API back pour affiché dans la liste
+  const handleSearch = () => {
+    axios
+      .get('/api/search', { params: filters })
+      .then((response) => {
+        setResults(response.data);
+      })
+      .catch((error) => {
+        console.error('Error searching products:', error);
+      });
+  };
 
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         name="pseudo"
-//         placeholder="Pseudo"
-//         value={filters.pseudo}
-//         onChange={handleInputChange}
-//       />
-//        <input
-//         type="text"
-//         name="job"
-//         placeholder="Job"
-//         value={filters.job}
-//         onChange={handleInputChange}
-//       />
-//       <input
-//         type="text"
-//         name="status"
-//         placeholder="Status"
-//         value={filters.status}
-//         onChange={handleInputChange}
-//       />
+  return (
+    <div>
+      <input
+        type="text"
+        name="pseudo"
+        placeholder="Pseudo"
+        value={filters.pseudo}
+        onChange={handleInputChange}
+      />
+       <input
+        type="text"
+        name="job"
+        placeholder="Job"
+        value={filters.job}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="status"
+        placeholder="Status"
+        value={filters.status}
+        onChange={handleInputChange}
+      />
 
-//     <div className='border-2 px-3 py-2 rounded-2xl min-w-[300px] '>
-//       <button className=' w-52 text-black focus:outline-none focus:placeholder-transparent' onClick={handleSearch}>Rechercher sur WeBEE HIVE</button>
+    <div className='border-2 px-3 py-2 rounded-2xl min-w-[300px] '>
+      <button className=' w-52 text-black focus:outline-none focus:placeholder-transparent' onClick={handleSearch}>Rechercher sur WeBEE HIVE</button>
 
-//       <ul>
-//         {results.map((result) => (
-//           <li key={result._id}>{result.pseudo}</li>
-//         ))}
-//       </ul>
+      <ul>
+        {results.map((result) => (
+          <li key={result._id}>{result.pseudo}</li>
+        ))}
+      </ul>
 
-//     </div>
+    </div>
     
-//     </div>
-//   );
-// };
+    </div>
+  );
+};
 
-// export default SearchBar;
+export default SearchBar;
 
 
 
