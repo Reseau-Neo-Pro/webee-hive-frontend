@@ -8,7 +8,7 @@ import { CiPizza, CiBeerMugFull, CiGlobe } from 'react-icons/ci';
 function Card () {
     return (
         <div className="flex flex-col w-64 h-80 rounded-[70px] shadow-md shadow-[#c9c6c6] justify-between mx-[30px] relative">
-            <img className="p-0 rounded-[70px] absolute max-w-[288px] top-0 left-0" alt="wave" src="/images/wave.svg"/>
+            <img className="p-0 rounded-[70px] absolute max-w-[288px]" alt="wave" src="/images/wave.svg"/>
             <div className="relative pt-[32px] pl-[15px] pr-[15px]">
                 <div className="flex flex-row justify-between px-[20px]">
                     <div className="flex items-center"><CiMedal size={30}/>1 an</div>
