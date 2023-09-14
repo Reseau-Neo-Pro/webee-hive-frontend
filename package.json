@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbo --show-all",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,10 +14,7 @@
     "@mui/material": "^5.13.0",
     "@prisma/client": "^4.14.1",
     "@reduxjs/toolkit": "^1.9.5",
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.1",
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
     "bcrypt": "^5.1.0",
     "eslint": "8.39.0",
     "eslint-config-next": "^13.4.5",
@@ -30,6 +27,9 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "prisma": "^4.14.1",
