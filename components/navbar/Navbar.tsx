@@ -3,7 +3,7 @@ import React from "react";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
-import  Logo  from "../../public/logo_webeehive.svg";
+import  Logo  from "./Logo";
 
 import { HiOutlineHome } from "react-icons/hi";
 import { HiOutlineUsers } from "react-icons/hi";
