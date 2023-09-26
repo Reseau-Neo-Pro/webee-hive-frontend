@@ -8,7 +8,7 @@ const Logo: React.FC<MenuProps> = ({ showText }) => {
   return (
     <div className="flex items-center gap-5 flex-col mb-3">
       <Image
-        src="/images/LOGO.png"
+        src="/images/logo_webeehive.svg"
         alt="WeBee Hive Logo"
         width={82}
         height={82}
