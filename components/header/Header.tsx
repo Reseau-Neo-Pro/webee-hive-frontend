@@ -1,5 +1,5 @@
 // Import de tout mes composants React
-import Searchbar from "./Searchbar";
+// import Searchbar from "./Searchbar";
 //import Logo from "./Logo";
 import ProfileAndNotif from "./ProfileAndNotif";
 import LoginAndSignup from "./LoginAndSignup";
@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser }) => {
         sx={{ backgroundColor: "transparent", backgroundImage: "none" }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Searchbar />
+          {/* <Searchbar /> */}
           <BasicSwitch />
           {currentUser ? <ProfileAndNotif /> : <LoginAndSignup />}
         </Toolbar>

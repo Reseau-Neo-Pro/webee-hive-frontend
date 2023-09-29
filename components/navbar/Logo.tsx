@@ -1,19 +1,14 @@
-import MenuProps from "@/interfaces/MenuProps";
-import { Box } from "@mui/material";
 import Image from "next/image";
+
+interface MenuProps {
+  showText: boolean;
+}
 
 const Logo: React.FC<MenuProps> = ({ showText }) => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      gap={5}
-      flexDirection="column"
-      marginBottom={3}
-      data-testid="navbar-logo"
-    >
+    <div className="flex items-center gap-5 flex-col mb-3">
       <Image
-        src="/images/LOGO.png"
+        src="/images/logo_webeehive.svg"
         alt="WeBee Hive Logo"
         width={82}
         height={82}
@@ -27,7 +22,7 @@ const Logo: React.FC<MenuProps> = ({ showText }) => {
           height={39}
         />
       )}
-    </Box>
+    </div>
   );
 };
 
