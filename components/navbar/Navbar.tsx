@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
-// logo de webeehive
-import Logo from "./Logo";
-
 // partie icone
 import { HiOutlineHome } from "react-icons/hi";
 import { HiOutlineUsers } from "react-icons/hi";
@@ -33,10 +30,6 @@ const Navbar = () => {
   return (
     <div className={`${isNavOpen ? 'w-52' : ' w-12 '} `}>
 
-      {/* logo navbar */}
-      <div className="logoNavbar mt-4">
-        <Logo />
-      </div>
 
       {/* navbar menu */}
       <nav>
