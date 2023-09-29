@@ -1,8 +1,5 @@
 // import React from "react";
 
-
-
-
 // const Menu: React.FC<MenuProps> = ({ showText }) => {
 //   //  to do   : mettre les bons liens
 //   let menuCategories = [
