@@ -1,0 +1,18 @@
+version = 1
+
+[[analyzers]]
+name = "docker"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["react"]
+  environment = [
+    "nodejs",
+    "mongo",
+    "jest"
+  ]
+
+[[transformers]]
+name = "prettier"
