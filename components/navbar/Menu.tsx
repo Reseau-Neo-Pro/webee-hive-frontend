@@ -1,17 +1,16 @@
-
 import { HiOutlineHome, HiOutlineUsers } from "react-icons/hi";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineEventNote } from "react-icons/md";
-import {  IoSettingsOutline  } from "react-icons/io5";
-import { BsGlobe} from "react-icons/bs";
+import { IoSettingsOutline } from "react-icons/io5";
+import { BsGlobe } from "react-icons/bs";
 
 const menuNavBar = [
   {
     id: 1,
     icon: <HiOutlineHome />,
     name: "ACCUEIL",
-    link: "/"
+    link: "/",
   },
   {
     id: 2,
@@ -49,8 +48,6 @@ const menuNavBar = [
     name: "PARAMETRES",
     link: "/parametres",
   },
-
-]
+];
 
 export default menuNavBar;
-
