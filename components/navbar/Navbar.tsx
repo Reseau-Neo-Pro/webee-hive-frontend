@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
+import menuNavBar from "./Menu";
+
 import { FaBars } from "react-icons/fa";
 
 import { HiOutlineHome, HiOutlineUsers } from "react-icons/hi";
@@ -11,7 +13,7 @@ import { MdOutlineEventNote } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { BsGlobe } from "react-icons/bs";
 
-import menuNavBar from "./Menu";
+
 
 const iconComponents: { [key: string]: React.ReactElement }  = {
   HiOutlineHome: <HiOutlineHome />,
