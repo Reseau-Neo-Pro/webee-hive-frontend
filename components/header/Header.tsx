@@ -1,38 +1,24 @@
-// Import de tout mes composants React
-// import Searchbar from "./Searchbar";
-//import Logo from "./Logo";
-import ProfileAndNotif from "./ProfileAndNotif";
-import LoginAndSignup from "./LoginAndSignup";
-import { AppBar, Box, Toolbar } from "@mui/material";
-import BasicSwitch from "./BasicSwitch";
+'use client';
 
-// Init de l'interface pour les props de Header
-interface HeaderProps {
-  currentUser?: boolean; //currentUser non required -> type booleen
+import Switch from '@/components/header/Switch';
+
+const Header = (currentUser: any) => {
+    return (
+        <>
+            <div className={"shadow-xl min-w[300px] flex justify-between items-center h-16 p-6"}>
+                <div className={"min-w-[300px] rounded-2xl border-2 px-3 py-2"}>
+                    <input type="text" placeholder="Rechercher sur webee hive"/>
+                </div>
+                <div className={"flex px-3 py-2 text-2xl w-full justify-center"}>
+                    <Switch/>
+                </div>
+                <div className={"flex space-x-8 text-2xl"}>
+                    <div>Connection</div>
+                    <div>inscription</div>
+                </div>
+            </div>
+        </>
+    )
 }
-
-// Initialisation du composant fonctionnel React 'FC'<Props> puis appel de la fonction
-const Header: React.FC<HeaderProps> = ({ currentUser }) => {
-  return (
-    <Box
-      sx={{
-        //border: "1px solid orange",
-        backgroundColor: "background.main",
-      }}
-    >
-      <AppBar
-        position="static"
-        className="appbar"
-        sx={{ backgroundColor: "transparent", backgroundImage: "none" }}
-      >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          {/* <Searchbar /> */}
-          <BasicSwitch />
-          {currentUser ? <ProfileAndNotif /> : <LoginAndSignup />}
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-};
 
 export default Header;
