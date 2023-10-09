@@ -9,7 +9,6 @@ import { useCallback, useState } from "react";
 import Header from "@/components/header/Header";
 import { Providers } from "@/libs/redux/Providers";
 import { ThemeProvider } from "@/libs/redux/reducers/theme/ThemeProvider";
-import { CssBaseline } from "@mui/material";
 import SetTheme from "@/libs/redux/reducers/theme/setTheme";
 
 //initialisation de la font dans une variable
@@ -45,7 +44,6 @@ export default function RootLayout({
         <Providers>
           <ThemeProvider>
             <SetTheme />
-            <CssBaseline />
             {/*Layout Ici */}
             {/* Navbar */}
             <Navbar />
