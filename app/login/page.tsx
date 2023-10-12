@@ -1,10 +1,8 @@
 "use client";
 import axios from 'axios';
-
-import { FormEvent, useState } from "react";
-import { useRouter } from "next/router";
+import { FormEvent, useState } from 'react';
+import { useRouter } from 'next/router';
 import Input from '@/components/input/Input';
-
 
 // Interface décrivant la structure de l'état initial
 interface Credentials {
@@ -23,11 +21,12 @@ export default function LoginPage() {
     const [credentials, setCredentials] = useState(initialCredentials);
     const router = useRouter();
 
-    // Cette fonction permet de mettre à jour dynamiquement les valeurs de 'credentials' en fonction des saisies de l'utilisateur dans les champs de formulaire.
+    // Fonction qui permet de mettre à jour dynamiquement les valeurs de 'credentials' en fonction des saisies de l'utilisateur dans les champs de formulaire.
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
     };
 
+    // Fonction pour gérer la soumission du formulaire et l'authentification
     const signIn = async (credentials: Credentials) => {
         try {
             // Envoyer une requête HTTP au serveur pour vérifier les identifiants
@@ -89,7 +88,7 @@ export default function LoginPage() {
                 </button>
             </div>
             <div>
-                You already have an account ? <a href="/register">Sign up</a>{' '}
+                You already have an account? <a href="/register">Sign up</a>{' '}
             </div>
         </form>
     );
