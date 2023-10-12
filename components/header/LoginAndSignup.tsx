@@ -1,4 +1,3 @@
-
 const LoginAndSignup = () => {
   return (
     <div className="flex gap-8 text-2xl">
