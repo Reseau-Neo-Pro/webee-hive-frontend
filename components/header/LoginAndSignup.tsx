@@ -1,8 +1,6 @@
-import { Box } from "@mui/material";
-
 const LoginAndSignup = () => {
   return (
-    <Box className="flex gap-8 text-2xl" sx={{ color: "text.main" }}>
+    <div className="flex gap-8 text-2xl">
       <div
         className="cursor-pointer transition hover:text-yellow-400"
         data-testid="login-link"
@@ -15,7 +13,7 @@ const LoginAndSignup = () => {
       >
         Inscription
       </div>
-    </Box>
+    </div>
   );
 };
 export default LoginAndSignup;
