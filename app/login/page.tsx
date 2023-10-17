@@ -23,9 +23,11 @@ export default function LoginPage() {
 
   // Fonction qui permet de mettre à jour dynamiquement les valeurs de 'credentials' en fonction des saisies de l'utilisateur dans les champs de formulaire.
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setCredentials((prevCredentials) => ({ ...prevCredentials, [e.target.name]: e.target.value }));
-  },
-    []);
+    setCredentials((prevCredentials) => ({
+      ...prevCredentials,
+      [e.target.name]: e.target.value,
+    }));
+  }, []);
 
   // Fonction pour gérer la soumission du formulaire et l'authentification
   const signIn = useCallback(async (credentials: Credentials) => {
@@ -43,25 +45,26 @@ export default function LoginPage() {
       console.error("Authentication error:", error);
       return { error: "Authentication Error" };
     }
-  },
-    []);
+  }, []);
 
   // Fonction qui est appelée lors de la soumission du formulaire
-  const onSubmit = useCallback(async (event: FormEvent) => {
-    event.preventDefault();
+  const onSubmit = useCallback(
+    async (event: FormEvent) => {
+      event.preventDefault();
 
-    // Appel de la fonction signIn pour l'authentification
-    const callback = await signIn(credentials);
+      // Appel de la fonction signIn pour l'authentification
+      const callback = await signIn(credentials);
 
-    // Gestion de la réponse du backend
-    if (callback?.ok) {
-      router.push("/"); // Redirection vers la page d'accueil en cas de succès
-    } else {
-      console.error(callback?.error);
-      // Gére l'erreur d'authentification comme vous le souhaitez en cas d'échec
-    }
-  },//chaque fois que credentials, router, ou signIn changent, la fonction onSubmit sera mise à jour avec ces nouvelles valeurs, tout en optimisant les performances en évitant de recréer la fonction inutilement. Cela garantit que votre composant réagit de manière efficace aux changements de ces dépendances.
-    [credentials, router, signIn]);
+      // Gestion de la réponse du backend
+      if (callback?.ok) {
+        router.push("/"); // Redirection vers la page d'accueil en cas de succès
+      } else {
+        console.error(callback?.error);
+        // Gére l'erreur d'authentification comme vous le souhaitez en cas d'échec
+      }
+    }, //chaque fois que credentials, router, ou signIn changent, la fonction onSubmit sera mise à jour avec ces nouvelles valeurs, tout en optimisant les performances en évitant de recréer la fonction inutilement. Cela garantit que votre composant réagit de manière efficace aux changements de ces dépendances.
+    [credentials, router, signIn],
+  );
 
   return (
     // Formulaire de connexion avec des champs email, mot de passe et bouton "Sign in"
