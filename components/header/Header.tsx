@@ -2,7 +2,7 @@
 
 import Switch from "@/components/header/Switch";
 
-const Header = (currentUser: any) => {
+const Header = (currentUser: boolean) => {
   return (
     <>
       <div
