@@ -6,10 +6,10 @@ import "./globals.css"; //Import du global css -> dont Tailwinds
 import { Bebas_Neue } from "next/font/google";
 // Import du composant Header
 import { useCallback, useState } from "react";
-import Header from "@/components/header/Header";
 import { Providers } from "@/libs/redux/Providers";
 import { ThemeProvider } from "@/libs/redux/reducers/theme/ThemeProvider";
 import SetTheme from "@/libs/redux/reducers/theme/setTheme";
+import Header from "@/components/header/Header";
 
 //initialisation de la font dans une variable
 const font = Bebas_Neue({
